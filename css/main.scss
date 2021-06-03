@@ -1,6 +1,7 @@
 $colors: (
     primary: #005DFF,
-    primary-light: lighten(#005DFF, 40%)
+    primary-light: lighten(#005DFF, 40%),
+    primary-dark: darken(#005DFF, 40%),
     accent: #FFF6BB
 );
 
@@ -12,6 +13,9 @@ $borders: 15px;
 @function color($color-name){
     @return map-get($colors, $color-name);
 }
+
+ 
+
 
 body,html{
     height: 100%;
@@ -35,7 +39,7 @@ body{
         text-decoration: none;
         padding: $padding;
         display: block;
-        text-decoration: uppercase;
+        text-transform: uppercase;
     }
 }
 
@@ -72,5 +76,34 @@ main{
             }
         }
 
+    }
+
+    section#primary{
+        color: #fff;
+        padding: $padding;
+        text-align: center;
+
+        h1{
+            font-size: 3em;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+
+        p{
+            font-size: 1.4em;
+        }
+
+        a{
+            text-decoration: none;
+            color: color(primary-dark);
+            text-transform: uppercase;
+            border-radius: $borders;
+            font-weight: bold;
+            background-color: color(accent);
+            display: block;
+            text-align: center;
+            margin: 50px auto 0 auto; 
+            padding: $padding;
+        }
     }
 }
