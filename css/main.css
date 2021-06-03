@@ -1,1 +1,4 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+body {
+  background-color: map0-get();
+}
+/*# sourceMappingURL=main.css.map */
